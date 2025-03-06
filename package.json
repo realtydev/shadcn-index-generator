@@ -1,6 +1,6 @@
 {
   "name": "shadcn-index-generator",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Generate index.ts files for shadcn/ui components with proper type exports",
   "main": "dist/index.js",
   "bin": {
