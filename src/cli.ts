@@ -27,6 +27,8 @@ program
   .option('-t, --single-line-threshold <number>', 'Maximum exports for single-line format', String(defaultConfig.singleLineThreshold))
   .option('-v, --verbose', 'Show verbose output')
   .option('--dry-run', 'Show what would be generated without writing to file')
+  .option('--force-extensions', 'Force explicit file extensions in imports')
+  .option('--ext <extension>', 'Override file extension to use for imports (e.g., .js, .jsx)')
   .action(async (directory, options) => {
     try {
       // Set up configuration from command line options
@@ -37,7 +39,9 @@ program
         sortAlphabetically: options.sort !== false,
         singleLineThreshold: parseInt(options.singleLineThreshold, 10),
         verbose: options.verbose || false,
-        dryRun: options.dryRun || false
+        dryRun: options.dryRun || false,
+        forceExplicitExtensions: options.forceExtensions || false,
+        extensionOverride: options.ext || ''
       };
 
       // Run the generator

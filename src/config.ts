@@ -32,6 +32,12 @@ export interface Config {
 
   /** Show what would be generated without writing to file */
   dryRun: boolean;
+
+  /** Force using explicit file extensions in imports */
+  forceExplicitExtensions: boolean;
+  
+  /** Extension to use for imports (.js, .jsx, etc.) */
+  extensionOverride: string;
 }
 
 // Default configuration
@@ -81,4 +87,10 @@ export const defaultConfig: Config = {
 
   // Dry run mode
   dryRun: false,
+  
+  // Force using explicit file extensions in imports
+  forceExplicitExtensions: false,
+  
+  // Extension override (if set, use this extension instead of the detected one)
+  extensionOverride: ''
 };
