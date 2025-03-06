@@ -89,39 +89,6 @@ await generateIndex({
 });
 ```
 
-## Why this tool?
-
-When working with shadcn/ui components in TypeScript projects with `isolatedModules` enabled, you need to properly mark type exports with the `type` keyword. This tool automatically:
-
-1. Scans your component files
-2. Detects both value and type exports
-3. Properly marks type exports with the `type` keyword
-4. Generates a clean, formatted index.ts file
-
-This prevents TypeScript errors like:
-
-```
-Re-exporting a type when 'isolatedModules' is enabled requires using 'export type'.ts(1205)
-```
-
-## Type Detection
-
-The tool automatically detects common type patterns in UI components:
-
-- Names ending with `Api` (like `CarouselApi`)
-- Names ending with `Props` (like `ButtonProps`)
-- Names ending with `Config` (like `ChartConfig`)
-- Names starting with `Use` (like `UseFormField`)
-- Names ending with `Context`, `Provider`, `Store`, etc.
-
-## Error Handling
-
-The tool includes friendly error handling for common issues:
-
-- Directory not found
-- Permission errors
-- Path too long errors
-- Other file system issues
 
 ## Contributing
 
