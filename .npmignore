@@ -1,0 +1,39 @@
+# Source code (we only publish dist/)
+/src
+
+# Development and test files
+/test
+/tests
+*.test.ts
+*.test.js
+*.spec.ts
+*.spec.js
+jest.config.js
+.eslintrc.js
+.eslintrc.json
+.prettierrc
+tsconfig.json
+
+# IDE files
+.editorconfig
+.idea
+.vscode
+*.swp
+*.swo
+
+# Git files
+.git
+.gitignore
+.github
+
+# CI files
+.travis.yml
+.gitlab-ci.yml
+azure-pipelines.yml
+.circleci
+
+# Misc files
+coverage
+.nyc_output
+node_modules
+*.log
